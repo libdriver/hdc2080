@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/hdc2080/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-HDC2080 器件是一款采用小型 DFN 封装的集成式湿 度和温度传感器，能够以超低功耗提供高准确度测量。 这款电容式传感器包括新的集成数字功能和用于消散冷 凝和湿气的加热元件。HDC2080 数字功能包括可编程 中断阈值，因此能够提供警报和系统唤醒，而无需微控 制器持续对系统进行监控。同时，HDC2080 还具有可 编程采样间隔，功耗较低，并且支持 1.8V 电源电压， 因此非常适合电池供电型系统。HDC2080 为各种环境监测和物联网 (IoT) 应用（如智 能恒温器和智能家居助理）提供高准确度测量功能。对于印刷电路板 (PCB) 区域较小的设计，可以通过使用 与 HDC2080 完全软件兼容的 HDC2010 获得较小的芯 片级封装 (CSP) 选项。
+HDC2080 器件是一款采用小型 DFN 封装的集成式湿度和温度传感器，能够以超低功耗提供高准确度测量。 这款电容式传感器包括新的集成数字功能和用于消散冷凝和湿气的加热元件。HDC2080 数字功能包括可编程中断阈值，能够提供警报和系统唤醒，无需微控制器持续对系统进行监控。HDC2080 还具有可编程采样间隔，功耗较低，并且支持 1.8V 电源电压， 非常适合电池供电型系统。HDC2080 为各种环境监测和物联网 (IoT) 应用（如智 能恒温器和智能家居助理）提供高准确度测量功能。对于印刷电路板 (PCB) 区域较小的设计，可以通过使用 与 HDC2080 完全软件兼容的 HDC2010 获得较小的芯 片级封装 (CSP) 选项。
 
 LibDriver HDC2080是LibDriver推出的HDC2080全功能驱动，该驱动提供温度、相对湿度读取和中断等功能并且它符合MISRA标准。
 
