@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/hdc2080/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-HDC2080器件是一款採用小型DFN封裝的集成式濕度和溫度感測器，能够以超低功耗提供高準確度量測。 這款電容式感測器包括新的集成數位功能和用於消散冷凝和濕氣的加熱元件。 HDC2080數位功能包括可程式設計中斷閾值，囙此能够提供警報和系統喚醒，而無需微控制器持續對系統進行監控。 同時，HDC2080還具有可程式設計採樣間隔，功耗較低，並且支持1.8V電源電壓，囙此非常適合電池供電型系統。 HDC2080為各種環境監測和物聯網（IoT）應用（如智慧恒溫器和智能家居助理）提供高準確度量測功能。 對於印刷電路板（PCB）區域較小的設計，可以通過使用與HDC2080完全軟件相容的HDC2010獲得較小的晶片級封裝（CSP）選項。
+HDC2080器件是一款採用小型DFN封裝的集成式濕度和溫度感測器，能够以超低功耗提供高準確度量測。 這款電容式感測器包括新的集成數位功能和用於消散冷凝和濕氣的加熱元件。 HDC2080數位功能包括可程式設計中斷閾值，能够提供警報和系統喚醒，無需微控制器持續對系統進行監控。 HDC2080還具有可程式設計採樣間隔，功耗較低，並且支持1.8V電源電壓，非常適合電池供電型系統。 HDC2080為各種環境監測和物聯網（IoT）應用（如智慧恒溫器和智能家居助理）提供高準確度量測功能。 對於印刷電路板（PCB）區域較小的設計，可以通過使用與HDC2080完全軟件相容的HDC2010獲得較小的晶片級封裝（CSP）選項。
 
 LibDriver HDC2080是LibDriver推出的HDC2080全功能驅動，該驅動提供溫度、相對濕度讀取和中斷等功能並且它符合MISRA標準。
 
