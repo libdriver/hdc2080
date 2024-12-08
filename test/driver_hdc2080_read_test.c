@@ -40,8 +40,8 @@ static hdc2080_handle_t gs_handle;        /**< hdc2080 handle */
 
 /**
  * @brief     read test
- * @param[in] addr_pin is the address pin
- * @param[in] times is the test times
+ * @param[in] addr_pin address pin
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 read failed

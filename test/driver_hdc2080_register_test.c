@@ -41,7 +41,7 @@ static hdc2080_handle_t gs_handle;        /**< hdc2080 handle */
 
 /**
  * @brief     register test
- * @param[in] addr_pin is the address pin
+ * @param[in] addr_pin address pin
  * @return    status code
  *            - 0 success
  *            - 1 test failed

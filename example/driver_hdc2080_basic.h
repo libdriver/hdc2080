@@ -64,7 +64,7 @@ extern "C"{
 
 /**
  * @brief     basic example init
- * @param[in] addr_pin is the address pin
+ * @param[in] addr_pin address pin
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -83,8 +83,8 @@ uint8_t hdc2080_basic_deinit(void);
 
 /**
  * @brief      basic example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

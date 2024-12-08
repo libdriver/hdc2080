@@ -50,12 +50,12 @@ extern "C"{
 
 /**
  * @brief     interrupt test
- * @param[in] addr_pin is the address pin
- * @param[in] high_deg is the temperature high threshold
- * @param[in] low_deg is the temperature low threshold
- * @param[in] high_percent is the humidity high threshold
- * @param[in] low_percent is the humidity low threshold
- * @param[in] times is the test times
+ * @param[in] addr_pin address pin
+ * @param[in] high_deg temperature high threshold
+ * @param[in] low_deg temperature low threshold
+ * @param[in] high_percent humidity high threshold
+ * @param[in] low_percent humidity low threshold
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 read failed

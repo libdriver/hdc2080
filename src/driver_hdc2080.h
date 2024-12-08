@@ -182,56 +182,56 @@ typedef struct hdc2080_info_s
 
 /**
  * @brief     initialize hdc2080_handle_t structure
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] STRUCTURE is hdc2080_handle_t
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] STRUCTURE hdc2080_handle_t
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_INIT(HANDLE, STRUCTURE)             memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_IIC_INIT(HANDLE, FUC)              (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_IIC_DEINIT(HANDLE, FUC)            (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to an iic_read function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to an iic_read function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_IIC_READ(HANDLE, FUC)              (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to an iic_write function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to an iic_write function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_IIC_WRITE(HANDLE, FUC)             (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_DELAY_MS(HANDLE, FUC)              (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an hdc2080 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an hdc2080 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_HDC2080_LINK_DEBUG_PRINT(HANDLE, FUC)           (HANDLE)->debug_print = FUC
@@ -249,7 +249,7 @@ typedef struct hdc2080_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an hdc2080 info structure
+ * @param[out] *info pointer to an hdc2080 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -259,8 +259,8 @@ uint8_t hdc2080_info(hdc2080_info_t *info);
 
 /**
  * @brief     set the iic address pin
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] addr_pin is the address pin
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] addr_pin address pin
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -270,8 +270,8 @@ uint8_t hdc2080_set_addr_pin(hdc2080_handle_t *handle, hdc2080_address_t addr_pi
 
 /**
  * @brief      get the iic address pin
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *addr_pin points to an address pin buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *addr_pin pointer to an address pin buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -281,7 +281,7 @@ uint8_t hdc2080_get_addr_pin(hdc2080_handle_t *handle, hdc2080_address_t *addr_p
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an hdc2080 handle structure
+ * @param[in] *handle pointer to an hdc2080 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic init failed
@@ -296,7 +296,7 @@ uint8_t hdc2080_init(hdc2080_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an hdc2080 handle structure
+ * @param[in] *handle pointer to an hdc2080 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 deinit failed
@@ -308,11 +308,11 @@ uint8_t hdc2080_deinit(hdc2080_handle_t *handle);
 
 /**
  * @brief      read the temperature and humidity data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature humidity failed
@@ -325,9 +325,9 @@ uint8_t hdc2080_read_temperature_humidity(hdc2080_handle_t *handle, uint16_t *te
 
 /**
  * @brief      read the temperature
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature failed
@@ -339,9 +339,9 @@ uint8_t hdc2080_read_temperature(hdc2080_handle_t *handle, uint16_t *temperature
 
 /**
  * @brief      read the humidity data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read humidity failed
@@ -353,7 +353,7 @@ uint8_t hdc2080_read_humidity(hdc2080_handle_t *handle, uint16_t *humidity_raw, 
 
 /**
  * @brief     read poll
- * @param[in] *handle points to an hdc2080 handle structure
+ * @param[in] *handle pointer to an hdc2080 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 read poll failed
@@ -366,8 +366,8 @@ uint8_t hdc2080_read_poll(hdc2080_handle_t *handle);
 
 /**
  * @brief     set temperature resolution
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] resolution is the set resolution
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] resolution temperature resolution
  * @return    status code
  *            - 0 success
  *            - 1 set temperature resolution failed
@@ -379,8 +379,8 @@ uint8_t hdc2080_set_temperature_resolution(hdc2080_handle_t *handle, hdc2080_res
 
 /**
  * @brief      get temperature resolution
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *resolution points to a resolution buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *resolution pointer to a resolution buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature resolution failed
@@ -392,8 +392,8 @@ uint8_t hdc2080_get_temperature_resolution(hdc2080_handle_t *handle, hdc2080_res
 
 /**
  * @brief     set humidity resolution
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] resolution is the set resolution
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] resolution humidity resolution
  * @return    status code
  *            - 0 success
  *            - 1 set humidity resolution failed
@@ -405,8 +405,8 @@ uint8_t hdc2080_set_humidity_resolution(hdc2080_handle_t *handle, hdc2080_resolu
 
 /**
  * @brief      get humidity resolution
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *resolution points to a resolution buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *resolution pointer to a resolution buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity resolution failed
@@ -418,8 +418,8 @@ uint8_t hdc2080_get_humidity_resolution(hdc2080_handle_t *handle, hdc2080_resolu
 
 /**
  * @brief     set the chip mode
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] mode is the chip mode
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -431,8 +431,8 @@ uint8_t hdc2080_set_mode(hdc2080_handle_t *handle, hdc2080_mode_t mode);
 
 /**
  * @brief      get the chip mode
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *mode points to a chip mode buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *mode pointer to a chip mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get mode failed
@@ -444,8 +444,8 @@ uint8_t hdc2080_get_mode(hdc2080_handle_t *handle, hdc2080_mode_t *mode);
 
 /**
  * @brief     enable or disable measurement
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set measurement failed
@@ -457,8 +457,8 @@ uint8_t hdc2080_set_measurement(hdc2080_handle_t *handle, hdc2080_bool_t enable)
 
 /**
  * @brief      get measurement status
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *enable points to a bool value
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *enable pointer to a bool value
  * @return     status code
  *             - 0 success
  *             - 1 get measurement failed
@@ -470,7 +470,7 @@ uint8_t hdc2080_get_measurement(hdc2080_handle_t *handle, hdc2080_bool_t *enable
 
 /**
  * @brief     soft reset
- * @param[in] *handle points to an hdc2080 handle structure
+ * @param[in] *handle pointer to an hdc2080 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -482,8 +482,8 @@ uint8_t hdc2080_soft_reset(hdc2080_handle_t *handle);
 
 /**
  * @brief     set auto measurement mode
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] mode is the set mode
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set auto measurement mode failed
@@ -495,8 +495,8 @@ uint8_t hdc2080_set_auto_measurement_mode(hdc2080_handle_t *handle, hdc2080_auto
 
 /**
  * @brief      get auto measurement mode
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get auto measurement mode failed
@@ -508,8 +508,8 @@ uint8_t hdc2080_get_auto_measurement_mode(hdc2080_handle_t *handle, hdc2080_auto
 
 /**
  * @brief     enable or disable heater
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set heater failed
@@ -521,8 +521,8 @@ uint8_t hdc2080_set_heater(hdc2080_handle_t *handle, hdc2080_bool_t enable);
 
 /**
  * @brief      get heater status
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get heater failed
@@ -534,8 +534,8 @@ uint8_t hdc2080_get_heater(hdc2080_handle_t *handle, hdc2080_bool_t *enable);
 
 /**
  * @brief     enable or disable interrupt pin
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt pin failed
@@ -547,8 +547,8 @@ uint8_t hdc2080_set_interrupt_pin(hdc2080_handle_t *handle, hdc2080_bool_t enabl
 
 /**
  * @brief      get interrupt pin status
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt pin failed
@@ -560,8 +560,8 @@ uint8_t hdc2080_get_interrupt_pin(hdc2080_handle_t *handle, hdc2080_bool_t *enab
 
 /**
  * @brief     set interrupt polarity
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] polarity is the set interrupt polarity
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] polarity interrupt polarity
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt polarity failed
@@ -573,8 +573,8 @@ uint8_t hdc2080_set_interrupt_polarity(hdc2080_handle_t *handle, hdc2080_interru
 
 /**
  * @brief      get interrupt polarity
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *polarity points to a polarity buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *polarity pointer to a polarity buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt polarity failed
@@ -586,8 +586,8 @@ uint8_t hdc2080_get_interrupt_polarity(hdc2080_handle_t *handle, hdc2080_interru
 
 /**
  * @brief     set interrupt mode
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] mode is the set interrupt mode
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] mode interrupt mode
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt mode failed
@@ -599,8 +599,8 @@ uint8_t hdc2080_set_interrupt_mode(hdc2080_handle_t *handle, hdc2080_interrupt_m
 
 /**
  * @brief      get interrupt mode
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *mode points to an interrupt mode buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *mode pointer to an interrupt mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt mode failed
@@ -612,8 +612,8 @@ uint8_t hdc2080_get_interrupt_mode(hdc2080_handle_t *handle, hdc2080_interrupt_m
 
 /**
  * @brief     set humidity high threshold
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] threshold is the set high threshold
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] threshold high threshold
  * @return    status code
  *            - 0 success
  *            - 1 set humidity high threshold failed
@@ -625,8 +625,8 @@ uint8_t hdc2080_set_humidity_high_threshold(hdc2080_handle_t *handle, uint8_t th
 
 /**
  * @brief      get humidity high threshold
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity high threshold failed
@@ -638,8 +638,8 @@ uint8_t hdc2080_get_humidity_high_threshold(hdc2080_handle_t *handle, uint8_t *t
 
 /**
  * @brief     set humidity low threshold
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] threshold is the set low threshold
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] threshold low threshold
  * @return    status code
  *            - 0 success
  *            - 1 set humidity low threshold failed
@@ -651,8 +651,8 @@ uint8_t hdc2080_set_humidity_low_threshold(hdc2080_handle_t *handle, uint8_t thr
 
 /**
  * @brief      get humidity low threshold
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity low threshold failed
@@ -664,8 +664,8 @@ uint8_t hdc2080_get_humidity_low_threshold(hdc2080_handle_t *handle, uint8_t *th
 
 /**
  * @brief     set temperature high threshold
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] threshold is the set high threshold
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] threshold high threshold
  * @return    status code
  *            - 0 success
  *            - 1 set temperature high threshold failed
@@ -677,8 +677,8 @@ uint8_t hdc2080_set_temperature_high_threshold(hdc2080_handle_t *handle, uint8_t
 
 /**
  * @brief      get temperature high threshold
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature high threshold failed
@@ -690,8 +690,8 @@ uint8_t hdc2080_get_temperature_high_threshold(hdc2080_handle_t *handle, uint8_t
 
 /**
  * @brief     set temperature low threshold
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] threshold is the set low threshold
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] threshold low threshold
  * @return    status code
  *            - 0 success
  *            - 1 set temperature low threshold failed
@@ -703,8 +703,8 @@ uint8_t hdc2080_set_temperature_low_threshold(hdc2080_handle_t *handle, uint8_t 
 
 /**
  * @brief      get temperature low threshold
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *threshold points to a threshold buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *threshold pointer to a threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature low threshold failed
@@ -716,8 +716,8 @@ uint8_t hdc2080_get_temperature_low_threshold(hdc2080_handle_t *handle, uint8_t 
 
 /**
  * @brief     set humidity offset adjustment
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] offset is the set offset
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] offset humidity offset
  * @return    status code
  *            - 0 success
  *            - 1 set humidity offset adjustment failed
@@ -729,8 +729,8 @@ uint8_t hdc2080_set_humidity_offset_adjustment(hdc2080_handle_t *handle, int8_t 
 
 /**
  * @brief      get humidity offset adjustment
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *offset points to an offset buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *offset pointer to an offset buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity offset adjustment failed
@@ -742,8 +742,8 @@ uint8_t hdc2080_get_humidity_offset_adjustment(hdc2080_handle_t *handle, int8_t 
 
 /**
  * @brief     set temperature offset adjustment
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] offset is the set offset
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] offset temperature offset
  * @return    status code
  *            - 0 success
  *            - 1 set temperature offset adjustment failed
@@ -755,8 +755,8 @@ uint8_t hdc2080_set_temperature_offset_adjustment(hdc2080_handle_t *handle, int8
 
 /**
  * @brief      get temperature offset adjustment
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *offset points to an offset buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *offset pointer to an offset buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature offset adjustment failed
@@ -768,9 +768,9 @@ uint8_t hdc2080_get_temperature_offset_adjustment(hdc2080_handle_t *handle, int8
 
 /**
  * @brief     enable or disable interrupt
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] interrupt is the set interrupt
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] interrupt chip interrupt
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt failed
@@ -782,9 +782,9 @@ uint8_t hdc2080_set_interrupt(hdc2080_handle_t *handle, hdc2080_interrupt_t inte
 
 /**
  * @brief      get interrupt status
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  interrupt is the set interrupt
- * @param[out] *enable points to a bool buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  interrupt chip interrupt
+ * @param[out] *enable pointer to a bool buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt failed
@@ -796,8 +796,8 @@ uint8_t hdc2080_get_interrupt(hdc2080_handle_t *handle, hdc2080_interrupt_t inte
 
 /**
  * @brief     set humidity max
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] max is the set humidity max
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] max humidity max
  * @return    status code
  *            - 0 success
  *            - 1 set humidity max failed
@@ -809,8 +809,8 @@ uint8_t hdc2080_set_humidity_max(hdc2080_handle_t *handle, uint8_t max);
 
 /**
  * @brief      get humidity max
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *max points to a humidity max buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *max pointer to a humidity max buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity max failed
@@ -822,8 +822,8 @@ uint8_t hdc2080_get_humidity_max(hdc2080_handle_t *handle, uint8_t *max);
 
 /**
  * @brief     set temperature max
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] max is the set temperature max
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] max temperature max
  * @return    status code
  *            - 0 success
  *            - 1 set temperature max failed
@@ -835,8 +835,8 @@ uint8_t hdc2080_set_temperature_max(hdc2080_handle_t *handle, uint8_t max);
 
 /**
  * @brief      get temperature max
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *max points to a temperature max buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *max pointer to a temperature max buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature max failed
@@ -848,8 +848,8 @@ uint8_t hdc2080_get_temperature_max(hdc2080_handle_t *handle, uint8_t *max);
 
 /**
  * @brief      get interrupt status
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[out] *status points to an interrupt status buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[out] *status pointer to an interrupt status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt status failed
@@ -861,9 +861,9 @@ uint8_t hdc2080_get_interrupt_status(hdc2080_handle_t *handle, uint8_t *status);
 
 /**
  * @brief      convert the humidity to the register raw data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  percent is the set percent
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  percent set percent
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -874,9 +874,9 @@ uint8_t hdc2080_humidity_convert_to_register(hdc2080_handle_t *handle, float per
 
 /**
  * @brief      convert the register raw data to the humidity
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *percent points to a percent buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *percent pointer to a percent buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -887,9 +887,9 @@ uint8_t hdc2080_humidity_convert_to_data(hdc2080_handle_t *handle, uint8_t reg, 
 
 /**
  * @brief      convert the temperature to the register raw data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  deg is the set deg
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  deg degress
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -900,9 +900,9 @@ uint8_t hdc2080_temperature_convert_to_register(hdc2080_handle_t *handle, float 
 
 /**
  * @brief      convert the register raw data to the temperature
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *deg points to a deg buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *deg pointer to a deg buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -913,9 +913,9 @@ uint8_t hdc2080_temperature_convert_to_data(hdc2080_handle_t *handle, uint8_t re
 
 /**
  * @brief      convert the humidity offset to the register raw data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  percent is the set percent
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  percent set percent
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -926,9 +926,9 @@ uint8_t hdc2080_humidity_offset_convert_to_register(hdc2080_handle_t *handle, fl
 
 /**
  * @brief      convert the register raw data to the humidity offset
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *percent points to a percent buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *percent pointer to a percent buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -939,9 +939,9 @@ uint8_t hdc2080_humidity_offset_convert_to_data(hdc2080_handle_t *handle, int8_t
 
 /**
  * @brief      convert the temperature offset to the register raw data
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  deg is the set deg
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  deg degress
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -952,9 +952,9 @@ uint8_t hdc2080_temperature_offset_convert_to_register(hdc2080_handle_t *handle,
 
 /**
  * @brief      convert the register raw data to the temperature offset
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *deg points to a deg buffer
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *deg pointer to a deg buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -976,10 +976,10 @@ uint8_t hdc2080_temperature_offset_convert_to_data(hdc2080_handle_t *handle, int
 
 /**
  * @brief     set chip register
- * @param[in] *handle points to an hdc2080 handle structure
- * @param[in] reg is the write register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the buffer length
+ * @param[in] *handle pointer to an hdc2080 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -991,10 +991,10 @@ uint8_t hdc2080_set_reg(hdc2080_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      get chip register
- * @param[in]  *handle points to an hdc2080 handle structure
- * @param[in]  reg is the read register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the buffer length
+ * @param[in]  *handle pointer to an hdc2080 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
