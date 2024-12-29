@@ -610,7 +610,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -656,8 +656,8 @@ Functions</h2></td></tr>
 <p>get the iic address pin </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*addr_pin</td><td>points to an address pin buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*addr_pin</td><td>pointer to an address pin buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -701,8 +701,8 @@ Functions</h2></td></tr>
 <p>get auto measurement mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -748,8 +748,8 @@ Functions</h2></td></tr>
 <p>get heater status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -795,8 +795,8 @@ Functions</h2></td></tr>
 <p>get humidity high threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -842,8 +842,8 @@ Functions</h2></td></tr>
 <p>get humidity low threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -889,8 +889,8 @@ Functions</h2></td></tr>
 <p>get humidity max </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*max</td><td>points to a humidity max buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*max</td><td>pointer to a humidity max buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -936,8 +936,8 @@ Functions</h2></td></tr>
 <p>get humidity offset adjustment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>points to an offset buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>pointer to an offset buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -983,8 +983,8 @@ Functions</h2></td></tr>
 <p>get humidity resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*resolution</td><td>points to a resolution buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*resolution</td><td>pointer to a resolution buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1036,9 +1036,9 @@ Functions</h2></td></tr>
 <p>get interrupt status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">interrupt</td><td>is the set interrupt </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interrupt</td><td>chip interrupt </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1084,8 +1084,8 @@ Functions</h2></td></tr>
 <p>get interrupt mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to an interrupt mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to an interrupt mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1131,8 +1131,8 @@ Functions</h2></td></tr>
 <p>get interrupt pin status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1178,8 +1178,8 @@ Functions</h2></td></tr>
 <p>get interrupt polarity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*polarity</td><td>points to a polarity buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*polarity</td><td>pointer to a polarity buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1225,8 +1225,8 @@ Functions</h2></td></tr>
 <p>get interrupt status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>points to an interrupt status buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>pointer to an interrupt status buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1272,8 +1272,8 @@ Functions</h2></td></tr>
 <p>get measurement status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1319,8 +1319,8 @@ Functions</h2></td></tr>
 <p>get the chip mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a chip mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a chip mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1366,8 +1366,8 @@ Functions</h2></td></tr>
 <p>get temperature high threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1413,8 +1413,8 @@ Functions</h2></td></tr>
 <p>get temperature low threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1460,8 +1460,8 @@ Functions</h2></td></tr>
 <p>get temperature max </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*max</td><td>points to a temperature max buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*max</td><td>pointer to a temperature max buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1507,8 +1507,8 @@ Functions</h2></td></tr>
 <p>get temperature offset adjustment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>points to an offset buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>pointer to an offset buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1554,8 +1554,8 @@ Functions</h2></td></tr>
 <p>get temperature resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*resolution</td><td>points to a resolution buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*resolution</td><td>pointer to a resolution buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1607,9 +1607,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the humidity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*percent</td><td>points to a percent buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*percent</td><td>pointer to a percent buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1660,9 +1660,9 @@ Functions</h2></td></tr>
 <p>convert the humidity to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>is the set percent </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>set percent </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1713,9 +1713,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the humidity offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*percent</td><td>points to a percent buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*percent</td><td>pointer to a percent buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1766,9 +1766,9 @@ Functions</h2></td></tr>
 <p>convert the humidity offset to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>is the set percent </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>set percent </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1803,7 +1803,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an hdc2080 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an hdc2080 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1837,7 +1837,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1892,9 +1892,9 @@ Functions</h2></td></tr>
 <p>read the humidity data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>points to a raw humidity buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>points to a converted humidity buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>pointer to a raw humidity buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>pointer to a converted humidity buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1930,7 +1930,7 @@ Functions</h2></td></tr>
 <p>read poll </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1983,9 +1983,9 @@ Functions</h2></td></tr>
 <p>read the temperature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>points to a raw temperature buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>points to a converted temperature buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>pointer to a raw temperature buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>pointer to a converted temperature buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2049,11 +2049,11 @@ Functions</h2></td></tr>
 <p>read the temperature and humidity data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>points to a raw temperature buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>points to a converted temperature buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>points to a raw humidity buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>points to a converted humidity buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>pointer to a raw temperature buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>pointer to a converted temperature buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>pointer to a raw humidity buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>pointer to a converted humidity buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2099,8 +2099,8 @@ Functions</h2></td></tr>
 <p>set the iic address pin </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr_pin</td><td>is the address pin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr_pin</td><td>address pin </td></tr>
   </table>
   </dd>
 </dl>
@@ -2144,8 +2144,8 @@ Functions</h2></td></tr>
 <p>set auto measurement mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the set mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>chip mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2191,8 +2191,8 @@ Functions</h2></td></tr>
 <p>enable or disable heater </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2238,8 +2238,8 @@ Functions</h2></td></tr>
 <p>set humidity high threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set high threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>high threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -2285,8 +2285,8 @@ Functions</h2></td></tr>
 <p>set humidity low threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set low threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>low threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -2332,8 +2332,8 @@ Functions</h2></td></tr>
 <p>set humidity max </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>is the set humidity max </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>humidity max </td></tr>
   </table>
   </dd>
 </dl>
@@ -2379,8 +2379,8 @@ Functions</h2></td></tr>
 <p>set humidity offset adjustment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>is the set offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>humidity offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -2426,8 +2426,8 @@ Functions</h2></td></tr>
 <p>set humidity resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>is the set resolution </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>humidity resolution </td></tr>
   </table>
   </dd>
 </dl>
@@ -2479,9 +2479,9 @@ Functions</h2></td></tr>
 <p>enable or disable interrupt </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">interrupt</td><td>is the set interrupt </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interrupt</td><td>chip interrupt </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2527,8 +2527,8 @@ Functions</h2></td></tr>
 <p>set interrupt mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the set interrupt mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>interrupt mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2574,8 +2574,8 @@ Functions</h2></td></tr>
 <p>enable or disable interrupt pin </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2621,8 +2621,8 @@ Functions</h2></td></tr>
 <p>set interrupt polarity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">polarity</td><td>is the set interrupt polarity </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">polarity</td><td>interrupt polarity </td></tr>
   </table>
   </dd>
 </dl>
@@ -2668,8 +2668,8 @@ Functions</h2></td></tr>
 <p>enable or disable measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2715,8 +2715,8 @@ Functions</h2></td></tr>
 <p>set the chip mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the chip mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>chip mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2762,8 +2762,8 @@ Functions</h2></td></tr>
 <p>set temperature high threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set high threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>high threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -2809,8 +2809,8 @@ Functions</h2></td></tr>
 <p>set temperature low threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the set low threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>low threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -2856,8 +2856,8 @@ Functions</h2></td></tr>
 <p>set temperature max </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>is the set temperature max </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>temperature max </td></tr>
   </table>
   </dd>
 </dl>
@@ -2903,8 +2903,8 @@ Functions</h2></td></tr>
 <p>set temperature offset adjustment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>is the set offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>temperature offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -2950,8 +2950,8 @@ Functions</h2></td></tr>
 <p>set temperature resolution </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>is the set resolution </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>temperature resolution </td></tr>
   </table>
   </dd>
 </dl>
@@ -2987,7 +2987,7 @@ Functions</h2></td></tr>
 <p>soft reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -3039,9 +3039,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the temperature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to a deg buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to a deg buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3092,9 +3092,9 @@ Functions</h2></td></tr>
 <p>convert the temperature to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>is the set deg </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>degress </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3145,9 +3145,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to a deg buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to a deg buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3198,9 +3198,9 @@ Functions</h2></td></tr>
 <p>convert the temperature offset to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an hdc2080 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>is the set deg </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an hdc2080 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>degress </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>

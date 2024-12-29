@@ -40,11 +40,11 @@ static hdc2080_handle_t gs_handle;        /**< hdc2080 handle */
 
 /**
  * @brief     interrupt example init
- * @param[in] addr_pin is the address pin
- * @param[in] high_deg is the temperature high threshold
- * @param[in] low_deg is the temperature low threshold
- * @param[in] high_percent is the humidity high threshold
- * @param[in] low_percent is the humidity low threshold
+ * @param[in] addr_pin address pin
+ * @param[in] high_deg temperature high threshold
+ * @param[in] low_deg temperature low threshold
+ * @param[in] high_percent humidity high threshold
+ * @param[in] low_percent humidity low threshold
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -340,8 +340,8 @@ uint8_t hdc2080_interrupt_init(hdc2080_address_t addr_pin,
 
 /**
  * @brief      interrupt example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

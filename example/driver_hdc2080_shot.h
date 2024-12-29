@@ -61,7 +61,7 @@ extern "C"{
 
 /**
  * @brief     shot example init
- * @param[in] addr_pin is the address pin
+ * @param[in] addr_pin address pin
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -80,8 +80,8 @@ uint8_t hdc2080_shot_deinit(void);
 
 /**
  * @brief      shot example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -91,7 +91,7 @@ uint8_t hdc2080_shot_read(float *temperature, float *humidity);
 
 /**
  * @brief      shot get temperature max
- * @param[out] *temperature points to a converted temperature buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -101,7 +101,7 @@ uint8_t hdc2080_shot_get_temperature_max(float *temperature);
 
 /**
  * @brief      shot get humidity max
- * @param[out] *percent points to a converted percent buffer
+ * @param[out] *percent pointer to a converted percent buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

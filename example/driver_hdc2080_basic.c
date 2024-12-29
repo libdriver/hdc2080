@@ -40,7 +40,7 @@ static hdc2080_handle_t gs_handle;        /**< hdc2080 handle */
 
 /**
  * @brief     basic example init
- * @param[in] addr_pin is the address pin
+ * @param[in] addr_pin address pin
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -324,8 +324,8 @@ uint8_t hdc2080_basic_init(hdc2080_address_t addr_pin)
 
 /**
  * @brief      basic example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
