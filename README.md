@@ -11,7 +11,7 @@
 The HDC2080 device is an integrated humidity and temperature sensor that provides high accuracy measurements with very low power consumption in a small DFN package. The capacitive-based sensor includes new integrated digital features and a heating element to dissipate condensation and moisture. The HDC2080 digital features include programmable interrupt thresholds to provide alerts and system wake-ups without requiring a microcontroller to be continuously monitoring the system. Combined
 with programmable sampling intervals, a low power consumption, and a support for a 1.8-V supply voltage, the HDC2080 is designed for battery operated systems.The HDC2080 provides high accuracy measurement capability for a wide range of environmental monitoring and Internet of Things (IoT) applications such as smart thermostats and smart home assistants. For designs where printed-circuit board (PCB) area is critical, a smaller CSP package option is available thru the HDC2010 with complete software compatibility with the HDC2080.
 
-LibDriver HDC2080 is a full-featured driver of HDC2080 launched by LibDriver.It provides the function of reading temperature , relative humidity and interrupt function. LibDriver is MISRA compliant.
+LibDriver HDC2080 is a full-featured driver for HDC2080, launched by LibDriver.It provides temperature reading, relative humidity reading, interrupt and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
