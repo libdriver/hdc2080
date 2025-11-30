@@ -56,6 +56,8 @@ LibDriver HDC2080是LibDriver推出的HDC2080全功能驱动，该驱动提供�
 #### example basic
 
 ```C
+#include "driver_hdc2080_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -103,6 +105,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_hdc2080_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -150,6 +154,8 @@ return 0;
 #### example interrupt
 
 ```C
+#include "driver_hdc2080_interrupt.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
