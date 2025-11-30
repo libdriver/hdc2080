@@ -57,6 +57,8 @@ You can refer to the examples in the /example directory to complete your own dri
 #### example basic
 
 ```C
+#include "driver_hdc2080_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -104,6 +106,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_hdc2080_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -151,6 +155,8 @@ return 0;
 #### example interrupt
 
 ```C
+#include "driver_hdc2080_interrupt.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;

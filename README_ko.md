@@ -57,6 +57,8 @@ LibDriver HDC2080은 LibDriver에서 출시한 HDC2080의 전체 기능 드라�
 #### example basic
 
 ```C
+#include "driver_hdc2080_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -104,6 +106,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_hdc2080_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
@@ -151,6 +155,8 @@ return 0;
 #### example interrupt
 
 ```C
+#include "driver_hdc2080_interrupt.h"
+
 uint8_t res;
 uint32_t i;
 float temperature;
