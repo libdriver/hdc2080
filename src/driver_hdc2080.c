@@ -1948,18 +1948,39 @@ uint8_t hdc2080_temperature_convert_to_data(hdc2080_handle_t *handle, uint8_t re
  */
 uint8_t hdc2080_humidity_offset_convert_to_register(hdc2080_handle_t *handle, float percent, int8_t *reg)
 {
-    if (handle == NULL)                     /* check handle */
+    uint8_t temp_reg = 0;
+    float weights[7] = {12.5f, 6.3f, 3.1f, 1.6f, 0.8f, 0.4f, 0.2f};
+    float current = 0.0f;
+    float remainder;
+    uint32_t i;
+
+    if (handle == NULL)                          /* check handle */
     {
-        return 2;                           /* return error */
+        return 2;                                /* return error */
     }
-    if (handle->inited != 1)                /* check handle initialization */
+    if (handle->inited != 1)                     /* check handle initialization */
     {
-        return 3;                           /* return error */
+        return 3;                                /* return error */
     }
     
-    *reg = (int8_t)(percent / 0.2f);        /* convert real data to register data */
+    if (percent < 0.0f)                          /* < 0 */
+    {
+        temp_reg |= 0x80;                        /* set flag */
+        current = -25.0f;                        /* -25 */
+    }
+    remainder = percent - current + 0.1f;        /* set remainder */
+    for (i = 0; i < 7; i++)                      /* 7 step */
+    {
+        if (remainder >= weights[i])             /* check weight */
+        {
+            temp_reg |= (1 << (6 - i));          /* set temp */
+            remainder -= weights[i];             /* step */
+        }
+    }
     
-    return 0;                               /* success return 0 */
+    *reg = (int8_t)temp_reg;                     /* save the reg */
+    
+    return 0;                                    /* success return 0 */
 }
 
 /**
@@ -1975,18 +1996,30 @@ uint8_t hdc2080_humidity_offset_convert_to_register(hdc2080_handle_t *handle, fl
  */
 uint8_t hdc2080_humidity_offset_convert_to_data(hdc2080_handle_t *handle, int8_t reg, float *percent)
 {
-    if (handle == NULL)                    /* check handle */
+    float weights[8] = {0.2f, 0.4f, 0.8f, 1.6f, 3.1f, 6.3f, 12.5f, -25.0f};
+    float total = 0.0f;
+    uint32_t i;
+    
+    if (handle == NULL)                            /* check handle */
     {
-        return 2;                          /* return error */
+        return 2;                                  /* return error */
     }
-    if (handle->inited != 1)               /* check handle initialization */
+    if (handle->inited != 1)                       /* check handle initialization */
     {
-        return 3;                          /* return error */
+        return 3;                                  /* return error */
     }
     
-    *percent = (float)(reg) * 0.2f;        /* convert raw data to real data */
+    for (i = 0; i < 8; i++)                        /* 8 step */
+    {
+        if (((uint8_t)reg & (1 << i)) != 0)        /* check weight */
+        {
+            total += weights[i];                   /* add weight */
+        }
+    }
     
-    return 0;                              /* success return 0 */
+    *percent = total;                              /* save percent */
+    
+    return 0;                                      /* success return 0 */
 }
 
 /**
@@ -2002,18 +2035,39 @@ uint8_t hdc2080_humidity_offset_convert_to_data(hdc2080_handle_t *handle, int8_t
  */
 uint8_t hdc2080_temperature_offset_convert_to_register(hdc2080_handle_t *handle, float deg, int8_t *reg)
 {
-    if (handle == NULL)                  /* check handle */
+    uint8_t temp_reg = 0;
+    float weights[7] = {10.32f, 5.16f, 2.58f, 1.28f, 0.64f, 0.32f, 0.16f};
+    float current = 0.0f;
+    float remainder;
+    uint32_t i;
+
+    if (handle == NULL)                        /* check handle */
     {
-        return 2;                        /* return error */
+        return 2;                              /* return error */
     }
-    if (handle->inited != 1)             /* check handle initialization */
+    if (handle->inited != 1)                   /* check handle initialization */
     {
-        return 3;                        /* return error */
+        return 3;                              /* return error */
     }
     
-    *reg = (int8_t)(deg / 0.16f);        /* convert real data to register data */
+    if (deg < 0.0f)                            /* < 0 */
+    {
+        temp_reg |= 0x80;                      /* set flag */
+        current = -20.62f;                     /* set current */
+    }
+    remainder = deg - current + 0.08f;         /* set remainder */
+    for (i = 0; i < 7; i++)                    /* 7 step */
+    {
+        if (remainder >= weights[i])           /* check weights */
+        {
+            temp_reg |= (1 << (6 - i));        /* set data */
+            remainder -= weights[i];           /* step */
+        }
+    }
     
-    return 0;                            /* success return 0 */
+    *reg = (int8_t)temp_reg;                   /* save the reg */
+    
+    return 0;                                  /* success return 0 */
 }
 
 /**
@@ -2029,18 +2083,30 @@ uint8_t hdc2080_temperature_offset_convert_to_register(hdc2080_handle_t *handle,
  */
 uint8_t hdc2080_temperature_offset_convert_to_data(hdc2080_handle_t *handle, int8_t reg, float *deg)
 {
-    if (handle == NULL)                 /* check handle */
+    float weights[8] = {0.16f, 0.32f, 0.64f, 1.28f, 2.58f, 5.16f, 10.32f, -20.62f};
+    float total = 0.0f;
+    uint32_t i;
+
+    if (handle == NULL)                            /* check handle */
     {
-        return 2;                       /* return error */
+        return 2;                                  /* return error */
     }
-    if (handle->inited != 1)            /* check handle initialization */
+    if (handle->inited != 1)                       /* check handle initialization */
     {
-        return 3;                       /* return error */
+        return 3;                                  /* return error */
     }
     
-    *deg = (float)(reg) * 0.16f;        /* convert raw data to real data */
+    for (i = 0; i < 8; i++)                        /* loop */
+    {
+        if (((uint8_t)reg & (1 << i)) != 0)        /* check weights */
+        {
+            total += weights[i];                   /* add weights */
+        }
+    }
     
-    return 0;                           /* success return 0 */
+    *deg = total;                                  /* save deg */
+    
+    return 0;                                      /* success return 0 */
 }
 
 /**
